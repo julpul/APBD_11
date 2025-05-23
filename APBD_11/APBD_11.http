@@ -1,0 +1,32 @@
+@APBD_11_HostAddress = http://localhost:5114
+
+GET {{APBD_11_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+POST http://localhost:5114/api/patient
+Content-Type: application/json
+
+{
+  "idDoctor": 1,
+  "date": "2025-05-23",
+  "dueDate": "2025-06-05",
+  "patient": {
+    "idPatient": 0,
+    "firstName": "Jan",
+    "lastName": "Kowalski",
+    "birthdate": "1990-04-12"
+  },
+  "medicaments": [
+    {
+      "idMedicament": 1,
+      "dose": 2,
+      "description": "1 rano, 1 wieczorem"
+    },
+    {
+      "idMedicament": 2,
+      "dose": 1,
+      "description": "Na noc"
+    }
+  ]
+}
